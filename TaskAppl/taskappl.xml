@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskAppl</name>
+    </assembly>
+    <members>
+        <member name="T:TaskAppl.Controllers.Api.TaskController">
+            <summary>
+            API-контроллер для управления задачами
+            </summary>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskController.#ctor(TaskAppl.DataAccess.Interfaces.ITaskService)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskController.Get">
+            <summary>
+            Возвращает все записи
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskController.Get(System.Int32)">
+            <summary>
+            Возвращает по ID одну запись
+            </summary>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskController.Post(TaskAppl.Shared.Models.TaskModel)">
+            <summary>
+            Создание записи
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskController.Put(System.Int32,TaskAppl.Shared.Models.TaskModel)">
+            <summary>
+            Обновление записи
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskController.Delete(System.Int32)">
+            <summary>
+            Удаленеи записи по ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TaskAppl.Controllers.Api.TaskFileController">
+            <summary>
+            API-контроллер для управления файлами
+            </summary>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskFileController.#ctor(TaskAppl.DataAccess.Interfaces.ITaskFileService,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskFileController.Get">
+            <summary>
+            Возвращает все записи
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskFileController.GetByTask(System.Int32)">
+            <summary>
+            Возвращает все записи по ID задачи
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskFileController.GetById(System.Int32)">
+            <summary>
+            Возвращает по ID одну запись
+            </summary>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskFileController.UploadFile(System.Int32,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Добавляет файл в задачу по ID
+            </summary>
+            <param name="id"></param>
+            <param name="uploadedFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskFileController.DownloadFile(System.Int32)">
+            <summary>
+            Позволяет скачать файл по ID записи
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskAppl.Controllers.Api.TaskFileController.Delete(System.Int32)">
+            <summary>
+            Удаленеи записи по ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskAppl.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Program / CreateHostBuilder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TaskAppl.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Метод вызывается средой выполнения. Используется для добавления служб в контейнер.
+            </summary>
+            <param name="services">IServiceCollection</param>
+        </member>
+        <member name="M:TaskAppl.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Метод вызывается средой выполнения. Используется для настройки конвейера HTTP-запросов. 
+            </summary>
+            <param name="app">IApplicationBuilder</param>
+            <param name="env">IWebHostEnvironment</param>
+        </member>
+        <member name="T:TaskAppl.StartupExtensions.ServiceExtentions">
+            <summary>
+            Класс сервисных рсширений
+            </summary>
+        </member>
+        <member name="M:TaskAppl.StartupExtensions.ServiceExtentions.AddServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Добавляет сервисы для DI
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
