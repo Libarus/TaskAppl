@@ -177,7 +177,7 @@ namespace TaskAppl.Controllers.Api
             string? mediaDir = _configuration.GetSection("AppSettings").GetValue<string>("MediaDir");
 
             // TODO: проверка на существование директории
-            if (!System.IO.File.Exists(mediaDir)) throw new Exception("Директория не найдена");
+            if (!System.IO.Directory.Exists(mediaDir)) throw new Exception("Директория не найдена");
 
             return mediaDir;
         }
